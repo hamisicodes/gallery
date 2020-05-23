@@ -6,8 +6,14 @@ from django.contrib.auth.models import User
 class Location(models.Model):
     name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
 class Category(models.Model):
     name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 
 class Image(models.Model):
@@ -17,4 +23,7 @@ class Image(models.Model):
     category = models.ForeignKey(Category , on_delete =models.CASCADE)
     publisher = models.ForeignKey(User, on_delete = models.CASCADE)
     image = models.ImageField(upload_to='images/', default='hamisi')
+
+    def __str__(self):
+        return self.name
 
