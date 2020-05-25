@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+    
+    <section class="cat-section">
+        <div class="text-center page-header">
+            <h2>{{ location }}</h2>
+
+        </div>
+    </section>
+
+    {{block.super}}
+
+    {% endblock %}
+
+</body>
+
+</html>
