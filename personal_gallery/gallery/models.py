@@ -15,6 +15,8 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+
 
 
 class Image(models.Model):
@@ -27,4 +29,8 @@ class Image(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['-category']
+        
 
