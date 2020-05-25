@@ -9,7 +9,9 @@ def image_list(request):
     return render(request,'index.html' , {'images':images})
 
 def category(request,name):
+
     category = Category.objects.get(name = name)
     images = Image.objects.filter(category = category)
 
-    return render(request,'category.html' , {'images':images , 'category': category})
+
+    return render(request,'category.html' , {'images':images , 'category': category })
