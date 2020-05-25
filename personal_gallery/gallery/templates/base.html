@@ -94,22 +94,20 @@
                             <div class="modal-header">
                                 <h4>Image</h4>
                                 
-                                <button class="btn btn-primary" >copy</button>
+                                <button class="btn btn-primary" onclick="copy()" >copy</button>
 
                             </div>
                             <div class="modal-body">
-                                <img src="{{ image.image.url }}" alt="image">
+
+                                <img src="{{image.image.url }}" alt="image">
+                                <input type="text" name="link" id="link" value ="{{ image.image.url }}">
 
                                 <p><b>Name</b>: {{ image.name}}</p> 
                                 <p><b>Location</b>: {{ image.location}}</p>
                                 <p><b>Category</b>: {{ image.category}}</p>
                                 <p><b>Description</b>: {{ image.description}}</p> 
                             </div>
-                            <div class="modal-footer">
-                                
-                                
-
-                            </div>
+                          
 
 
                         </div>
@@ -138,6 +136,15 @@
     
 
     {% block scripts %}
+    <script>
+        function copy(){
+            var copytext = document.getElementById("link")
+            copytext.select()
+            document.execCommand("copy")
+
+        }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
