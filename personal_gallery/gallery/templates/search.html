@@ -1,0 +1,24 @@
+{%extends 'base.html'%} 
+
+
+{% block content %}
+    
+
+ <section class="cat-section">
+    <div class="text-center">
+        {% if images %}
+        <h2 class="text-center">{{ images|length }} search results for "{{message}}"</h2>
+        {% else %}
+        <div class="description">
+            <h2> Found 0 images for the search term "{{message}}"</h2>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+
+
+{{block.super}}
+
+{% endblock %}
+
