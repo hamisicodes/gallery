@@ -15,3 +15,11 @@ def category(request,name):
 
 
     return render(request,'category.html' , {'images':images , 'category': category })
+
+def category(request,name):
+
+    location = Location.objects.get(name = name)
+    images = Image.objects.filter(location = location)
+
+
+    return render(request,'category.html' , {'images':images , 'location': location })
