@@ -81,38 +81,32 @@
     </section>
     <section class="image-section">
         <div class="container">
-            <img  onclick="showModal()" class="img-fluid img-thumbnail" src="{% static 'photos/bg2.jpeg' %}" alt="">
-            
-            <img class="img-fluid img-thumbnail" src="{% static 'photos/bg3.jpeg' %}" alt="" data-target="#imgmodal"
+            {% for image in images %}
+            <img class="img-fluid img-thumbnail img-responsive" src="{{ image.image.url }}" alt="" data-target="#imgmodal-{{ image.id }}"
                 data-toggle="modal">
-            <img class="img-fluid img-thumbnail" src="{% static 'photos/bg4.jpeg' %}" alt="" data-target="#imgmodal"
-                data-toggle="modal">
-            <img class="img-fluid img-thumbnail" src="{% static 'photos/bg5.jpeg' %}" alt="" data-target="#imgmodal"
-                data-toggle="modal">
-            <img class="img-fluid img-thumbnail" src="{% static 'photos/bg2.jpeg' %}" alt="" data-target="#imgmodal"
-                data-toggle="modal">
-            <img class="img-fluid img-thumbnail" src="{% static 'photos/bg3.jpeg' %}" alt="" data-target="#imgmodal"
-                data-toggle="modal">
+            {% endfor %}
         </div>
     </section>
 
 
     <!-- modal -->
+    {% for image in images %}
+        
     <div class="container">
         <div class="row">
             <div class="col-md-6">
 
 
-                <div class="modal" id="imgmodal" tabindex="-1">
+                <div class="modal" id="imgmodal-{{ image.id }}" tabindex="-1">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4>Image</h4>
-                                <button class="close" data-dismis="modal" onclick="hideModal()">&times;</button>
+                                <!-- <button class="close" data-dismis="modal" onclick="hideModal()">&times;</button> -->
 
                             </div>
                             <div class="modal-body">
-                                <img src="photos/bg1.jpeg" alt="image">
+                                <img src="{{ image.image.url }}" alt="image">
                             </div>
 
 
@@ -124,6 +118,9 @@
             </div>
         </div>
     </div>
+   
+    {% endfor %}
+    
 
     {% block scripts %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
