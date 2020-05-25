@@ -32,5 +32,8 @@ class Image(models.Model):
 
     class Meta:
         ordering = ['-category']
+
+    def save_image(self):
+        self.save()
         
 
