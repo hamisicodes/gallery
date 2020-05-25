@@ -68,6 +68,7 @@
     {% block content %}
 
     {% if images %}
+
     </section>
     <section class="image-section">
         <div class="container">
@@ -97,6 +98,9 @@
                             </div>
                             <div class="modal-body">
                                 <img src="{{ image.image.url }}" alt="image">
+                                
+                                <p>{{ image.categoy}}</p>
+                                <p>{{ image.description}}</p> 
                             </div>
 
 
@@ -111,12 +115,15 @@
    
     {% endfor %}
     {% else %}
-    <div class="text-center">
-        <div class="alert alert-info" role="alert">
-            Images of this category will be added soon.You can view other categories
-          </div>
+    <div class="container">
+        <div class="text-center">
+            <div class="alert alert-info" role="alert">
+                Images of this category will be added soon.You can view other categories
+              </div>
+        </div>
+     
     </div>
- 
+
     {% endif %}
 
     {% endblock %}
