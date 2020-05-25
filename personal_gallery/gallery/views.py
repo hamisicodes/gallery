@@ -23,3 +23,17 @@ def location(request,name):
 
 
     return render(request,'location.html' , {'images':images , 'location': name })
+
+
+def search_results(request):
+
+    if 'result' in request.GET and request.GET["result"]:
+        search_term = request.GET.get("result")
+        searched_images = Image.searchimage(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search.html',{"message":message,"images": searched_images})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'search.html',{"message":message})
