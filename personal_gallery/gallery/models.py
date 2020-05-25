@@ -11,7 +11,7 @@ class Location(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
-    description =models.TextField()
+    description =models.TextField(default = 'description')
 
     def __str__(self):
         return self.name
