@@ -32,11 +32,12 @@
                             Location
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Kenya</a>
-                            <a class="dropdown-item" href="#">Africa</a>
-                            <a class="dropdown-item" href="#">Australia</a>
-                            <a class="dropdown-item" href="#">Asia</a>
-                            <a class="dropdown-item" href="#">Europe</a>
+                            <a class="dropdown-item" href="{% url 'location' 'Kenya' %}">Kenya</a>
+                            <a class="dropdown-item" href="{% url 'location' 'Africa' %}">Africa</a>
+                            <a class="dropdown-item" href="{% url 'location' 'Australia' %}">Australia</a>
+                            <a class="dropdown-item" href="{% url 'location' 'Asia' %}">Asia</a>
+                            <a class="dropdown-item" href="{% url 'location' 'Europe' %}">Europe</a>
+                            <a class="dropdown-item" href="{% url 'location' 'South America' %}">South America</a>
                         </div>
                     </li>
                 </ul>
@@ -125,7 +126,7 @@
     <div class="container">
         <div class="text-center">
             <div class="alert alert-info" role="alert">
-                Images of this category will be added soon.You can view other categories
+                Images for this category will be added soon.You can view other categories
               </div>
         </div>
      

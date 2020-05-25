@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Image,Category
+from .models import Image,Category,Location
 
 # Create your views here.
 
@@ -16,10 +16,10 @@ def category(request,name):
 
     return render(request,'category.html' , {'images':images , 'category': category })
 
-def category(request,name):
+def location(request,name):
 
     location = Location.objects.get(name = name)
     images = Image.objects.filter(location = location)
 
 
-    return render(request,'category.html' , {'images':images , 'location': location })
+    return render(request,'location.html' , {'images':images , 'location': name })
