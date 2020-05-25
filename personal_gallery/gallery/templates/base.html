@@ -93,14 +93,22 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4>Image</h4>
-                                <!-- <button class="close" data-dismis="modal" onclick="hideModal()">&times;</button> -->
+                                
+                                <button class="btn btn-primary" >copy</button>
 
                             </div>
                             <div class="modal-body">
                                 <img src="{{ image.image.url }}" alt="image">
+
+                                <p><b>Name</b>: {{ image.name}}</p> 
+                                <p><b>Location</b>: {{ image.location}}</p>
+                                <p><b>Category</b>: {{ image.category}}</p>
+                                <p><b>Description</b>: {{ image.description}}</p> 
+                            </div>
+                            <div class="modal-footer">
                                 
-                                <p>{{ image.categoy}}</p>
-                                <p>{{ image.description}}</p> 
+                                
+
                             </div>
 
 

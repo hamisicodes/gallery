@@ -10,7 +10,7 @@ class Location(models.Model):
         return self.name
 
     def save_location(self):
-    self.save()
+         self.save()
 
     def delete_location(self):
         self.delete()
@@ -26,7 +26,7 @@ class Category(models.Model):
         return self.name
 
     def save_category(self):
-    self.save()
+        self.save()
 
     def delete_category(self):
         self.delete()
