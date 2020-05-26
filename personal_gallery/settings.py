@@ -29,10 +29,10 @@ SECRET_KEY = 'oiq03mawa95qnklzv5a%mzhd%6c(&vvyfmgp-9^0!l6k3&tec2'
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 MODE=config("MODE", default="dev")
-SECRET_KEY='3oiq03mawa95qnklzv5a%mzhd%6c(&vvyfmgp-9^0!l6k3&tec2'
-DEBUG = config('DEBUG',  cast=bool)
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -104,10 +104,15 @@ else:
        )
    }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gallery',
+        'USER': 'hamisi',
+    'PASSWORD':'hamisi',
+    }
+}
 
 
 
