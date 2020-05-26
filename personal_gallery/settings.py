@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+# from decouple import config
+# import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gallery.apps.GalleryConfig',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -139,4 +142,10 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 django_heroku.settings(locals())
+
+# cloudinary.config( 
+#   cloud_name = "hamisicodes", 
+#   api_key = "474444398892396", 
+#   api_secret = "Fy37Lh-J7UfgviYO1jxkChFugeY" 
+# )
 
