@@ -29,7 +29,7 @@ SECRET_KEY = 'oiq03mawa95qnklzv5a%mzhd%6c(&vvyfmgp-9^0!l6k3&tec2'
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY='3oiq03mawa95qnklzv5a%mzhd%6c(&vvyfmgp-9^0!l6k3&tec2'
 DEBUG = config('DEBUG',  cast=bool)
 
 
