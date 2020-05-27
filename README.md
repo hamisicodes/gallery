@@ -1,10 +1,11 @@
-## gallery
+## [GALLERY](https://ham-gallery.herokuapp.com/ "live link ")
  a personal gallery application that I use to display my photos for others to see.
  
-## Developed By:
+## DEVELOPER DETAILS:
 >Hamisi Ngao
+>ngaohamisi@gmail.com
 
-## Technlogies used
+## TECHNOLOGIES USED
 >HTML    CSS     VANILLA-JS    PYTHON    DJANGO3
 
 ## SETUP AND INSTALLATION
