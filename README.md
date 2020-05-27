@@ -5,5 +5,13 @@
 >Hamisi Ngao
 
 ## Technlogies used
->HTML CSS  VANILLA JS PYTHON DJANGO3
+>HTML    CSS     VANILLA-JS    PYTHON    DJANGO3
+
+##SETUP AND INSTALLATION
+```bash
+npm install
+
+npm start
+
+```
 
