@@ -7,11 +7,15 @@
 ## Technlogies used
 >HTML    CSS     VANILLA-JS    PYTHON    DJANGO3
 
-##SETUP AND INSTALLATION
-```bash
-npm install
+## SETUP AND INSTALLATION
 
-npm start
+```bash
+
+$git clone https://github.com/hamisicodes/gallery.git
+$cd gallery
+$pip install -r requirements.txt
+$python manage.py runserver
+
 
 ```
 
